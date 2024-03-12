@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>html() method</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#getText').click(function(){
+				let result = $('#getTextPara').html();
+				alert(result);
+				console.log(result);
+			});
+			$('#setText').click(function(){
+				$('#setTextPara').html('This is new text set by html() method');
+			});
+				
+		});
+	</script>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h2>get the value using html() method</h2>
+	<button id="getText">Get html()</button>
+	<p id="getTextPara">This is the html content</p>
+	<br>
+	<h2>set the value using html() method</h2>
+	<button id="setText">Set html()</button>
+	<p id="setTextPara">This is default content</p>
+</body>
+
+</html>

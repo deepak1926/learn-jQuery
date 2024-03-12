@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>val() method</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#getText').click(function(){
+				console.log($('.getTextInput').val());
+			});
+			$('#setText').click(function(){
+				$('input').val('text using val()');
+			});
+				
+		});
+	</script>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h2>get the value using val() method</h2>
+	<button id="getText">Get val()</button>
+	<div>
+		<input class="getTextInput" type="text">
+		<input type="password" class="getTextInput" name="">
+		<input type="number" name="" class="getTextInput">
+	</div>
+	<br>
+	<h2>set the value using val() method</h2>
+	<button id="setText">Set val()</button>
+	<div>
+		<input type="text" >
+		<input type="password" name="">
+		<input type="number" name="">
+	</div>
+</body>
+
+</html>

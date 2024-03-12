@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>sliding() method</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<style>
+		*{
+			text-align: center;
+		}
+		#slideToggle{
+			height: 20px;
+			background-color: lightseagreen;
+			cursor: pointer;
+		}
+		#box1,#box2,#box3{
+			height: 100px;
+			background-color: lightseagreen;
+/*			display: none;*/
+		}
+	</style>
+</head>
+<body>
+	<p id="slideToggle">Click here for slideToggle</p>
+	<p id="box1">This is the slideToggle content</p>
+	<p id="box2">This is the slideToggle content with slideToggle(speed in ms)</p>
+	<p id="box3">This is the slideToggle content with slideToggle('slow')</p>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#slideToggle').click(function(){
+			$('#box1').slideToggle();
+			$('#box2').slideToggle(3000);
+			$('#box3').slideToggle('slow');
+		});
+	});
+</script>
+</html>

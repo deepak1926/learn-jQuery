@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>fadeIn() method</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<style>
+		*{
+			text-align: center;
+		}
+		#fadein{
+			height: 20px;
+			background-color: lightseagreen;
+			cursor: pointer;
+		}
+		#box1,#box2,#box3{
+			height: 100px;
+			background-color: lightseagreen;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<p id="fadein">Click here for fadein</p>
+	<p id="box1">This is the fadein content</p>
+	<p id="box2">This is the fadein content with fadein(speed in ms)</p>
+	<p id="box3">This is the fadein content with fadein('slow')</p>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#fadein').click(function(){
+			$('#box1').fadeIn();
+			$('#box2').fadeIn(3000);
+			$('#box3').fadeIn('slow');
+		});
+	});
+</script>
+</html>
